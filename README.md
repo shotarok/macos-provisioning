@@ -20,7 +20,9 @@ $ brew install ansible
 ### Run Provisioning
 
 ```shell
-HOMEBREW_CASK_OPTS="--appdir=/Applications" ansible-playbook -i hosts -vv localhost.yaml
+$ git clone git@github.com:Shtr28/osx-provisioning.git .osx-provisioning
+$ cd .osx-provisioning
+$ HOMEBREW_CASK_OPTS="--appdir=/Applications" ansible-playbook -i hosts -vv localhost.yaml
 ```
 
 ## Special Thanks
