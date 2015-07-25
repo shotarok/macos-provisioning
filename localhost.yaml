@@ -43,3 +43,5 @@
       - { name: virtualbox }
   tasks:
     - include: tasks/main.yaml
+  roles:
+    - { role: gitconfig }
