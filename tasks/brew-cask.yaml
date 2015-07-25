@@ -1,0 +1,12 @@
+# cask
+- name: homebrew-cask のインストール
+  homebrew: name=brew-cask state=latest
+- name: cask パッケージをインストール
+  homebrew_cask: name={{ item.name }} state={{ item.state|default('installed') }}
+  with_items: homebrew_cask_packages
+  register: cask_result
+- name: cask パッケージの情報保存先ディレクトリを作成
+  file: path=cask_info state=directory
+- name: cask パッケージの情報を保存
+  shell: brew cask info {{ item }} > cask_info/{{ item }}
+  with_items: cask_result.results | selectattr('changed') | map(attribute='item') | map(attribute='name') | list
