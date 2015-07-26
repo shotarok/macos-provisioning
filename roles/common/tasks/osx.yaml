@@ -1,0 +1,17 @@
+- name: Set Desktop to the right bottom hot corner
+  osx_defaults:
+    domain=com.apple.dock
+    key=wvous-br-corner
+    type=int
+    value=4
+  tags: Dock
+  notify: Refresh Dock
+
+- name: Set Application Window to the left bottom hot corner
+  osx_defaults:
+    domain=com.apple.dock
+    key=wvous-bl-corner
+    type=int
+    value=2
+  tags: Dock
+  notify: Refresh Dock
