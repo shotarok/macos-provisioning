@@ -42,6 +42,6 @@
       - { name: vagrant }
       - { name: virtualbox }
   tasks:
-    - include: tasks/main.yaml
+    - include: roles/common/tasks/main.yaml
   roles:
     - { role: gitconfig }
