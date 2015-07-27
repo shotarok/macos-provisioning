@@ -1,0 +1,38 @@
+---
+homebrew_taps:
+  - caskroom/cask
+  - homebrew/binary
+  - homebrew/dupes
+  - railwaycat/emacsmacport
+homebrew_packages:
+  - { name: ag }
+  - { name: ansible }
+  - { name: curl }
+  - { name: direnv }
+  - { name: emacs-mac }
+  - { name: git }
+  - { name: imagemagick }
+  - { name: jq }
+  - { name: nkf }
+  - { name: node }
+  - { name: openssl }
+  - { name: openssl, state: linked, install_options: force }
+  - { name: peco }
+  - { name: python }
+  - { name: readline }
+  - { name: tree }
+  - { name: wget }
+homebrew_cask_packages:
+  - { name: 1password }
+  - { name: atom }
+  - { name: dropbox }
+  - { name: skype }
+  - { name: google-drive }
+  - { name: google-chrome }
+  - { name: google-japanese-ime}
+  - { name: hipchat }
+  - { name: java }
+  - { name: slack }
+  - { name: tunnelblick}
+  - { name: vagrant }
+  - { name: virtualbox }
