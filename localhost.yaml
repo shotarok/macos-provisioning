@@ -41,7 +41,6 @@
       - { name: tunnelblick}
       - { name: vagrant }
       - { name: virtualbox }
-  tasks:
-    - include: roles/common/tasks/main.yaml
   roles:
     - { role: gitconfig }
+    - { role: common }
