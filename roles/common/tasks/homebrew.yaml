@@ -1,12 +1,12 @@
 # prepare for brew
-- name: homebrew の tap リポジトリを追加
+- name: Add tap repositories of homebrew
   homebrew_tap: tap={{ item }} state=present
   with_items: homebrew_taps
-- name: homebrew をアップデート
+- name: Update homebrew
   homebrew: update_homebrew=yes
 
 # brew
-- name: brew パッケージをインストール
+- name: Install brew packages
   homebrew: >
     name={{ item.name }}
     state={{ item.state | default('latest') }}
@@ -17,8 +17,8 @@
     }}
   with_items: homebrew_packages
   register: brew_result
-- name: brew パッケージの情報保存先ディレクトリを作成
+- name: Make a directory to store brew package information
   file: path=brew_info state=directory
-- name: brew パッケージの情報を保存
+- name: Save brew package information
   shell: brew info {{ item }} > brew_info/{{ item }}
   with_items: brew_result.results | selectattr('changed') | map(attribute='item') | map(attribute='name') | list
