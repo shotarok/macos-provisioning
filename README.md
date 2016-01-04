@@ -7,23 +7,31 @@ Ansible files for OS X Provisioning.
 ### Preparation
 
 ```shell
-# Install command line tools
+# install command line tools
 $ sudo xcodebuild -license
 $ xcode-select --install
-# Install homebrew
+# install homebrew
 $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 $ brew update
 # install ansible
 $ brew install ansible
 ```
 
-### Run Provisioning
+### Run all provisioning
 
 ```shell
 $ git clone git@github.com:Shtr28/osx-provisioning.git .osx-provisioning
 $ cd .osx-provisioning
 $ git submodule update # for ansible-modules-extra
-$  HOMEBREW_CASK_OPTS="--appdir=/Applications" ansible-playbook -M ./ansible-modules-extras/system -i hosts -vv localhost.yaml
+$ HOMEBREW_CASK_OPTS="--appdir=/Applications" ansible-playbook -M ./ansible-modules-extras/system -i hosts -vv localhost.yaml
+```
+
+### Run tagged tasks
+```shell
+# Check tasks and its tags
+$ ansible-playbook -i hosts localhost.yaml --list-tasks
+# Run tasks tagged 'cask'
+$  HOMEBREW_CASK_OPTS="--appdir=/Applications" ansible-playbook -i hosts -vv localhost.yaml --tags cask
 ```
 
 ## Special Thanks
