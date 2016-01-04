@@ -36,3 +36,6 @@ homebrew_cask_packages:
   - { name: tunnelblick}
   - { name: vagrant }
   - { name: virtualbox }
+  - { name: skitch }
+  - { name: anki }
+  - { name: dash }
