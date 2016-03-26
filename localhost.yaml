@@ -1,7 +1,6 @@
 - hosts: localhost
   connection: local
   gather_facts: no
-  sudo: no
   vars:
     me: shotarok
   roles:
