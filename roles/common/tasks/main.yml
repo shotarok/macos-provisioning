@@ -1,0 +1,4 @@
+---
+- include: homebrew.yml
+- include: brew-cask.yml
+- include: oh-my-zsh.yml
