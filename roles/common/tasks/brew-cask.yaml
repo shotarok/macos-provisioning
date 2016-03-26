@@ -4,8 +4,8 @@
   tags: cask
 
 - name: Install cask packages
-  homebrew_cask: name={{ item.name }} state={{ item.state|default('installed') }}
-  with_items: homebrew_cask_packages
+  homebrew_cask: name="{{ item.name }}" state="{{ item.state|default('installed') }}"
+  with_items: "{{ homebrew_cask_packages }}"
   register: cask_result
   tags: cask
 
@@ -14,6 +14,6 @@
   tags: cask
 
 - name: Save cask package information
-  shell: brew cask info {{ item }} > cask_info/{{ item }}
-  with_items: cask_result.results | selectattr('changed') | map(attribute='item') | map(attribute='name') | list
+  shell: brew cask info "{{ item }}" > cask_info/"{{ item }}"
+  with_items: "{{ cask_result.results | selectattr('changed') | map(attribute='item') | map(attribute='name') | list }}"
   tags: cask
