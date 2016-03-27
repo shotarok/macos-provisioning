@@ -1,0 +1,9 @@
+- name: Clone dotfiles
+  git: repo="{{dotfiles.repository  }}" dest="{{ dotfiles.dest }}"
+  register: dotfiles_repo
+  when: dotfiles.repository
+  tags: dotfiles
+- name: symlink dotfiles
+  shell: "{{ dotfiles.symlink_command  }}"
+  when: dotfiles_repo|changed
+  tags: dotfiles

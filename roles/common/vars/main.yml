@@ -41,3 +41,7 @@ homebrew_cask_packages:
   - { name: anki }
   - { name: dash }
   - { name: flux }
+dotfiles:
+  repository: git@github.com:shotarok/dotfiles.git
+  dest: ~/dotfiles
+  symlink_command: cd ~/dotfiles; sh setup.sh
