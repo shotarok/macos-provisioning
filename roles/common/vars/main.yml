@@ -35,7 +35,6 @@ homebrew_cask_packages:
   - { name: virtualbox }
   - { name: skitch }
   - { name: dash }
-  - { name: flux }
 dotfiles:
   repository: git@github.com:shotarok/dotfiles.git
   dest: ~/dotfiles
