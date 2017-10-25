@@ -28,7 +28,6 @@ homebrew_cask_packages:
   - { name: dropbox }
   - { name: google-chrome }
   - { name: google-japanese-ime}
-  - { name: hipchat }
   - { name: java }
   - { name: slack }
   - { name: tunnelblick}
