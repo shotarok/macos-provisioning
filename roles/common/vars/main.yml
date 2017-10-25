@@ -24,11 +24,8 @@ homebrew_packages:
   - { name: wget }
   - { name: aspell }
 homebrew_cask_packages:
-  - { name: 1password }
   - { name: atom }
   - { name: dropbox }
-  - { name: skype }
-  - { name: google-drive }
   - { name: google-chrome }
   - { name: google-japanese-ime}
   - { name: hipchat }
@@ -38,7 +35,6 @@ homebrew_cask_packages:
   - { name: vagrant }
   - { name: virtualbox }
   - { name: skitch }
-  - { name: anki }
   - { name: dash }
   - { name: flux }
 dotfiles:
