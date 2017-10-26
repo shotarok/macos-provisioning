@@ -1,17 +1,67 @@
-- name: Set Desktop to the right bottom hot corner
+- name: Set Desktop to the bottom right hot corner
   osx_defaults:
     domain=com.apple.dock
     key=wvous-br-corner
     type=int
     value=4
-  tags: Dock
-  notify: Refresh Dock
+  tags: dock
 
-- name: Set Application Window to the left bottom hot corner
+- name: Tell modifier of bottom right hot corner to be changed
+  osx_defaults:
+    domain=com.apple.dock
+    key=wvous-br-modifier
+    type=int
+    value=0
+  tags: dock
+
+- name: Set Mission Control to the bottom left hot corner
   osx_defaults:
     domain=com.apple.dock
     key=wvous-bl-corner
     type=int
     value=2
-  tags: Dock
-  notify: Refresh Dock
+  tags: dock
+
+- name: Tell modifier of bottom left hot corner to be changed
+  osx_defaults:
+    domain=com.apple.dock
+    key=wvous-bl-modifier
+    type=int
+    value=0
+  tags: dock
+
+- name: Set Sleep to the top left hot corner
+  osx_defaults:
+    domain=com.apple.dock
+    key=wvous-tl-corner
+    type=int
+    value=10
+  tags: dock
+
+- name: Tell modifier of top left hot corner to be changed
+  osx_defaults:
+    domain=com.apple.dock
+    key=wvous-tl-modifier
+    type=int
+    value=0
+  tags: dock
+
+- name: Set Launchpad to the top right hot corner
+  osx_defaults:
+    domain=com.apple.dock
+    key=wvous-tr-corner
+    type=int
+    value=11
+  tags: dock
+
+- name: Tell modifier of top right hot corner to be changed
+  osx_defaults:
+    domain=com.apple.dock
+    key=wvous-tr-modifier
+    type=int
+    value=0
+  tags: dock
+
+- name: Refresh Dock
+  command: killall Dock
+  tags: dock
