@@ -1,4 +1,4 @@
-- hosts: localhost
+- hosts: localdev
   connection: local
   gather_facts: no
   vars:
