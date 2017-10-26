@@ -1,5 +1,6 @@
 ---
-- include: homebrew.yml
-- include: brew-cask.yml
-- include: oh-my-zsh.yml
-- include: dotfiles.yml
+- import_tasks: homebrew.yml
+- import_tasks: brew-cask.yml
+- import_tasks: oh-my-zsh.yml
+- import_tasks: dotfiles.yml
+- import_tasks: osx.yml
