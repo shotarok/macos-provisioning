@@ -65,3 +65,17 @@
 - name: Refresh Dock
   command: killall Dock
   tags: dock
+
+- name: Set key repeat interval
+  osx_defaults:
+    key=KeyRepeat
+    type=int
+    value=1
+  tags: keyrepeat
+
+- name: Set time to start key repeats
+  osx_defaults:
+    key=InitialKeyRepeat
+    type=int
+    value=15
+  tags: keyrepeat
