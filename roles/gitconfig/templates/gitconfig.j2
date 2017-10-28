@@ -1,6 +1,0 @@
-{% for section, values in git_config.iteritems() %}
-[{{ section }}]
-{% for key, value in values.iteritems() %}
-    {{ key }} = {{ value }}
-{% endfor %}
-{% endfor %}
