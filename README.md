@@ -1,6 +1,6 @@
-# My OS X Provisioning
+# My Own macOS Provisioning with Ansible
 
-Ansible files for OS X Provisioning.
+Ansible taks for my own macOS Provisioning
 
 ## How to use
 
@@ -20,8 +20,8 @@ $ brew install ansible
 ### Run all provisioning
 
 ```shell
-$ git clone git@github.com:shotarok/osx-provisioning.git .osx-provisioning
-$ cd .osx-provisioning
+$ git clone git@github.com:shotarok/macos-provisioning.git .macos-provisioning
+$ cd .macos-provisioning
 $ git submodule update # for ansible-modules-extra
 $ HOMEBREW_CASK_OPTS="--appdir=/Applications" ansible-playbook -M ./ansible-modules-extras/system -i hosts -vv localhost.yml
 ```
