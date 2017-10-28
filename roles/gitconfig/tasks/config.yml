@@ -1,7 +1,15 @@
 ---
+- git_config: name=user.name scope=global value="{{ gitname }}"
+  tags: gitconfig
 
-- name: Configure .gitconfig file
-  template:
-    src=gitconfig.j2
-    dest=~/.gitconfig
-  when: git_config
+- git_config: name=user.email scope=global value="{{ gitmail }}"
+  tags: gitconfig
+
+- git_config: name=color.ui scope=global value=true
+  tags: gitconfig
+
+- git_config: name=core.editor scope=global value="{{ editor }}"
+  tags: gitconfig
+
+- git_config: name=core.excludesfile scope=global value="{{ excludes_path }}"
+  tags: gitconfig

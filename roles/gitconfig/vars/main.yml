@@ -1,0 +1,5 @@
+---
+gitname: Shotaro Kohama
+gitmail: khmshtr28@gmail.com
+editor: emacs
+excludes_path: "{{ lookup('env', 'HOME') }}/.gitexcludesfile"

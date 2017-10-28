@@ -23,7 +23,7 @@ $ brew install ansible
 $ git clone git@github.com:shotarok/macos-provisioning.git .macos-provisioning
 $ cd .macos-provisioning
 $ git submodule update # for ansible-modules-extra
-$ HOMEBREW_CASK_OPTS="--appdir=/Applications" ansible-playbook -M ./ansible-modules-extras/system -i hosts -vv localhost.yml
+$ HOMEBREW_CASK_OPTS="--appdir=/Applications" ansible-playbook -i hosts -vv localhost.yml
 ```
 
 ### Run tagged tasks
