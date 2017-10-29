@@ -1,7 +1,6 @@
 ---
 - name: Add global .gitignore as a .gitexcludesfile
-  file:
+  copy:
     src: gitignore
     dest: "{{ excludes_path }}"
-    state: file
   tags: gitconfig
