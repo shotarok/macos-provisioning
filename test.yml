@@ -1,0 +1,8 @@
+- hosts: localdev
+  connection: local
+  gather_facts: no
+  vars:
+    me: shotarok
+  roles:
+    - { role: gitconfig }
+    - { role: common }

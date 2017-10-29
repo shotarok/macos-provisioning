@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/shotarok/macos-provisioning.svg?branch=master)](https://travis-ci.org/shotarok/macos-provisioning)
+
 # My Own macOS Provisioning with Ansible
 
 Ansible taks for my own macOS Provisioning

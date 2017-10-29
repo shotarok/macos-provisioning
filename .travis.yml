@@ -1,0 +1,16 @@
+---
+# Please see osx environments
+# https://docs.travis-ci.com/user/reference/osx/#OS-X-Version
+os: osx
+
+before_install:
+  - brew update
+
+install:
+  - brew install ansible
+  - sudo mkdir -p /etc/ansible
+  - sudo touch /etc/ansible/hosts
+  - "echo -e '[localdev]\nlocalhost' | sudo tee -a /etc/ansible/hosts > /dev/null"
+
+script:
+  - ansible-playbook test.yml --syntax-check
