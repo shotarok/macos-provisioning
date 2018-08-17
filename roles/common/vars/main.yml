@@ -1,9 +1,4 @@
 ---
-homebrew_taps:
-  - caskroom/cask
-  - homebrew/binary
-  - homebrew/dupes
-  - railwaycat/emacsmacport
 homebrew_packages:
   - { name: ag }
   - { name: ansible }

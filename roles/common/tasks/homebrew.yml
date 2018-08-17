@@ -1,13 +1,7 @@
-# prepare for brew
-- name: Add tap repositories of homebrew
-  homebrew_tap: tap="{{ item }}" state=present
-  with_items: "{{ homebrew_taps }}"
-  tags: brew
 - name: Update homebrew
   homebrew: update_homebrew=yes
   tags: brew
 
-# brew
 - name: Install brew packages
   homebrew: >
     name="{{ item.name }}"
