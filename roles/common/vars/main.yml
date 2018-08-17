@@ -24,7 +24,6 @@ homebrew_packages:
   - { name: wget }
   - { name: aspell }
 homebrew_cask_packages:
-  - { name: atom }
   - { name: dropbox }
   - { name: google-chrome }
   - { name: google-japanese-ime}
@@ -35,6 +34,8 @@ homebrew_cask_packages:
   - { name: virtualbox }
   - { name: skitch }
   - { name: dash }
+  - { name: visual-studio-code }
+  - { name: clipy }
 dotfiles:
   repository: git@github.com:shotarok/dotfiles.git
   dest: ~/dotfiles
