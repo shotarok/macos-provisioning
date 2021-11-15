@@ -39,7 +39,3 @@ homebrew_cask_packages:
   - visual-studio-code
   - xbar
 
-dotfiles:
-  repository: 'git@github.com:shotarok/dotfiles.git'
-  dest: ~/dotfiles
-  symlink_command: cd ~/dotfiles; sh setup.sh
