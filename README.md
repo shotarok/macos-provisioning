@@ -1,8 +1,8 @@
-[![Build Status](https://travis-ci.org/shotarok/macos-provisioning.svg?branch=master)](https://travis-ci.org/shotarok/macos-provisioning)
+![lint](https://github.com/shotarok/macos-provisioning/actions/workflows/lint.yml/badge.svg)
 
-# My Own macOS Provisioning with Ansible
+# Ansible Playbook to provision macOS
 
-Ansible taks for my own macOS Provisioning
+An ansible-playbook to provision my macOS.
 
 ## How to use
 
@@ -32,9 +32,9 @@ $ cd .macos-provisioning
 $ ansible-playbook -i hosts -vv localhost.yml
 ```
 
-### Run tagged tasks
+### Run specific tasks
 ```console
-# Check tasks and its tags
+# Show a list of tags
 $ ansible-playbook -i hosts localhost.yml --list-tasks
 
 # Run tasks tagged 'cask'
@@ -48,7 +48,7 @@ $ ansible-playbook -i hosts -vv localhost.yml --tags cask
 - [boxen/puppet-osx](https://github.com/boxen/puppet-osx)
 - [kosssi/ansible-role-gitconfig](https://github.com/kosssi/ansible-role-gitconfig)
 
-### Web page
+### References
 
 - Mac の開発環境構築を自動化する (2015 年初旬編) http://t-wada.hatenablog.jp/entry/mac-provisioning-by-ansible
 - HomebrewとAnsibleでMacの開発環境構築を自動化する http://mawatari.jp/archives/mac-provisioning-by-homebrew-and-ansible
