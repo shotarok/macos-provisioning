@@ -22,7 +22,7 @@ jobs:
 
       - name: Install test dependencies
         run: |
-          sudo pip3 install ansible
+          brew install ansible
           ansible-galaxy collection install community.general
 
       - name: Check the playbook's syntax
