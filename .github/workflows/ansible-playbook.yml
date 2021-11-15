@@ -1,0 +1,34 @@
+name: Run ansible-playbook on macOS
+
+on: [pull_request]
+
+jobs:
+  integration:
+    name: Integration Test
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os:
+          - macos-10.15
+
+    steps:
+      - name: Check out the codebase
+        uses: actions/checkout@v2
+
+      - name: Uninstall GitHub Actions' built-in browsers
+        run: |
+          sudo rm -rf /Applications/Firefox.app
+          sudo rm -rf /Applications/Google\ Chrome.app
+
+      - name: Install test dependencies
+        run: |
+          sudo pip3 install ansible
+          ansible-galaxy collection install community.general
+
+      - name: Test the playbook's syntax
+        run: ansible-playbook main.yml --syntax-check
+
+      - name: Test the playbook.
+        run: ansible-playbook main.yml
+        env:
+          ANSIBLE_FORCE_COLOR: '1'
