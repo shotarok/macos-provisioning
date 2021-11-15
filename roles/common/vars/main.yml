@@ -1,37 +1,41 @@
----
 homebrew_packages:
-  - { name: ag }
-  - { name: ansible }
-  - { name: curl }
-  - { name: direnv }
-  - { name: emacs-mac }
-  - { name: git }
-  - { name: imagemagick }
-  - { name: jq }
-  - { name: nkf }
-  - { name: node }
-  - { name: openssl }
-  - { name: openssl, state: linked, install_options: force }
-  - { name: peco }
-  - { name: python }
-  - { name: readline }
-  - { name: tree }
-  - { name: wget }
-  - { name: aspell }
+  - ag
+  - ansible
+  - aspell
+  - curl
+  - direnv
+  - emacs
+  - git
+  - imagemagick
+  - java
+  - jq
+  - nkf
+  - node
+  - openssl
+  - openssl
+  - peco
+  - python
+  - readline
+  - tree
+  - wget
+
 homebrew_cask_packages:
-  - { name: dropbox }
-  - { name: google-chrome }
-  - { name: google-japanese-ime}
-  - { name: java }
-  - { name: slack }
-  - { name: tunnelblick}
-  - { name: vagrant }
-  - { name: virtualbox }
-  - { name: skitch }
-  - { name: dash }
-  - { name: visual-studio-code }
-  - { name: clipy }
+  - 1password
+  - alfred
+  - dropbox
+  - google-chrome
+  - grammarly
+  - homebrew/cask-drivers/gopro-webcam
+  - karabiner-elements
+  - rectangle
+  - skitch
+  - slack
+  - spotify
+  - tunnelblick
+  - visual-studio-code
+  - xbar
+
 dotfiles:
-  repository: git@github.com:shotarok/dotfiles.git
+  repository: 'git@github.com:shotarok/dotfiles.git'
   dest: ~/dotfiles
   symlink_command: cd ~/dotfiles; sh setup.sh
