@@ -1,4 +1,5 @@
 ![lint](https://github.com/shotarok/macos-provisioning/actions/workflows/lint.yml/badge.svg)
+![ansible-playgook](https://github.com/shotarok/macos-provisioning/actions/workflows/ansible-playbook.yml/badge.svg)
 
 # Ansible Playbook to provision macOS
 
