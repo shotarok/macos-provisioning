@@ -25,10 +25,10 @@ jobs:
           sudo pip3 install ansible
           ansible-galaxy collection install community.general
 
-      - name: Test the playbook's syntax
-        run: ansible-playbook main.yml --syntax-check
+      - name: Check the playbook's syntax
+        run: ansible-playbook -i hosts -vv localhost.yml --syntax-check
 
-      - name: Test the playbook.
-        run: ansible-playbook main.yml
+      - name: Execute the playbook
+        run: ansible-playbook -i hosts -vv localhost.yml
         env:
           ANSIBLE_FORCE_COLOR: '1'
