@@ -20,10 +20,18 @@ jobs:
           sudo rm -rf /Applications/Firefox.app
           sudo rm -rf /Applications/Google\ Chrome.app
 
-      - name: Install test dependencies
+      - name: Install ansible
+        run: brew install ansible
+
+      - name: Cache .ansible dir
+        uses: actions/checkout@v2
+        with:
+          path: ~/.ansible
+          key: ${{ runner.os }}-${{ hashFiles('**/requirements.galaxy.yml') }}
+
+      - name: Install ansible-galaxy
         run: |
-          brew install ansible
-          ansible-galaxy collection install community.general
+          ansible-galaxy collection install -r requirements.galaxy.yml
 
       - name: Check the playbook's syntax
         run: ansible-playbook -i hosts -vv localhost.yml --syntax-check

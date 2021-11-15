@@ -21,7 +21,7 @@ $ brew update
 $ brew install ansible
 
 # Install ansible collections
-$ ansible-galaxy collection install community.general
+$ ansible-galaxy collection install -r requirements.galaxy.yml
 ```
 
 ### Run all provisioning
