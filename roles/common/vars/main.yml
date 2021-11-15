@@ -18,12 +18,14 @@ homebrew_packages:
   - peco
   - python
   - readline
+  - tmux
   - tree
   - wget
 
 homebrew_cask_packages:
   - 1password
   - alfred
+  - bartender
   - dropbox
   - google-chrome
   - grammarly
@@ -36,8 +38,3 @@ homebrew_cask_packages:
   - tunnelblick
   - visual-studio-code
   - xbar
-
-dotfiles:
-  repository: 'git@github.com:shotarok/dotfiles.git'
-  dest: ~/dotfiles
-  symlink_command: cd ~/dotfiles; sh setup.sh
