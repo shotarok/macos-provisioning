@@ -18,12 +18,14 @@ homebrew_packages:
   - peco
   - python
   - readline
+  - tmux
   - tree
   - wget
 
 homebrew_cask_packages:
   - 1password
   - alfred
+  - bartender
   - dropbox
   - google-chrome
   - grammarly
