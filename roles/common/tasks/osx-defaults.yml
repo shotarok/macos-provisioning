@@ -5,6 +5,8 @@
     type: int
     value: 4
   tags: dock
+  notify:
+    - Refresh Dock
 
 - name: Tell modifier of bottom right hot corner to be changed
   community.general.osx_defaults:
@@ -13,6 +15,8 @@
     type: int
     value: 0
   tags: dock
+  notify:
+    - Refresh Dock
 
 - name: Set Mission Control to the bottom left hot corner
   community.general.osx_defaults:
@@ -21,6 +25,8 @@
     type: int
     value: 2
   tags: dock
+  notify:
+    - Refresh Dock
 
 - name: Tell modifier of bottom left hot corner to be changed
   community.general.osx_defaults:
@@ -29,6 +35,8 @@
     type: int
     value: 0
   tags: dock
+  notify:
+    - Refresh Dock
 
 - name: Set Sleep to the top left hot corner
   community.general.osx_defaults:
@@ -37,6 +45,8 @@
     type: int
     value: 10
   tags: dock
+  notify:
+    - Refresh Dock
 
 - name: Tell modifier of top left hot corner to be changed
   community.general.osx_defaults:
@@ -45,6 +55,8 @@
     type: int
     value: 0
   tags: dock
+  notify:
+    - Refresh Dock
 
 - name: Set Launchpad to the top right hot corner
   community.general.osx_defaults:
@@ -53,6 +65,8 @@
     type: int
     value: 11
   tags: dock
+  notify:
+    - Refresh Dock
 
 - name: Tell modifier of top right hot corner to be changed
   community.general.osx_defaults:
@@ -61,6 +75,8 @@
     type: int
     value: 0
   tags: dock
+  notify:
+    - Refresh Dock
 
 - name: Hide automatically the doc
   community.general.osx_defaults:
@@ -68,10 +84,9 @@
     key: autohide
     type: int
     value: 1
-
-- name: Refresh Dock
-  command: killall Dock
   tags: dock
+  notify:
+    - Refresh Dock
 
 - name: Set key repeat interval
   community.general.osx_defaults:

@@ -2,4 +2,5 @@
   ansible.builtin.copy:
     src: .tmux.conf
     dest: "{{ lookup('env', 'HOME') }}/.tmux.conf"
+    mode: preserve
   tags: dotfiles

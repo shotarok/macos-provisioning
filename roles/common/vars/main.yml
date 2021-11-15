@@ -5,7 +5,9 @@ homebrew_packages:
   - curl
   - direnv
   - emacs
+  - gh
   - git
+  - git-open
   - imagemagick
   - java
   - jq
