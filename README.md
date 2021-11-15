@@ -41,15 +41,10 @@ $ ansible-playbook -i hosts localhost.yml --list-tasks
 $ ansible-playbook -i hosts -vv localhost.yml --tags cask
 ```
 
-## Special Thanks
+## References
 
-### Repository/Module
 - [geerlingguy/mac-dev-playbook](https://github.com/geerlingguy/mac-dev-playbook)
 - [boxen/puppet-osx](https://github.com/boxen/puppet-osx)
 - [kosssi/ansible-role-gitconfig](https://github.com/kosssi/ansible-role-gitconfig)
 
-### References
 
-- Mac の開発環境構築を自動化する (2015 年初旬編) http://t-wada.hatenablog.jp/entry/mac-provisioning-by-ansible
-- HomebrewとAnsibleでMacの開発環境構築を自動化する http://mawatari.jp/archives/mac-provisioning-by-homebrew-and-ansible
-- ansibleでmacの環境構築をつくります from fout.qiita.com
