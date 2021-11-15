@@ -27,7 +27,7 @@ jobs:
         run: brew install ansible
 
       - name: Cache .ansible dir
-        uses: actions/checkout@v2
+        uses: actions/cache@v2
         with:
           path: ~/.ansible
           key: ${{ runner.os }}-${{ hashFiles('**/requirements.galaxy.yml') }}
