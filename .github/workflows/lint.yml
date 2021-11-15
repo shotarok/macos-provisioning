@@ -1,4 +1,4 @@
-name: Lint yaml and ansible files
+name: Lint ansible files
 
 on: [pull_request]
 
@@ -14,10 +14,10 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Install test dependencies.
+      - name: Install test dependencies
         run: pip3 install yamllint ansible ansible-lint
 
-      - name: Lint code.
+      - name: Lint code
         run: |
           yamllint .
           ansible-lint

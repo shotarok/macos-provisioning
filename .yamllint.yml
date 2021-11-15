@@ -7,3 +7,6 @@ rules:
     level: warning
 
   document-start: disable
+
+ignore:
+  .github/workflows/*
