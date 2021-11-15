@@ -1,27 +1,28 @@
 ![lint](https://github.com/shotarok/macos-provisioning/actions/workflows/lint.yml/badge.svg)
+![ansible-playgook](https://github.com/shotarok/macos-provisioning/actions/workflows/ansible-playbook.yml/badge.svg)
 
 # Ansible Playbook to provision macOS
 
-An ansible-playbook to provision my macOS.
+An ansible-playbook to provision shotarok's macOS.
 
 ## How to use
 
 ### Preparation
 
 ```console
-# install command line tools
+# Install command line tools
 $ sudo xcodebuild -license
 $ xcode-select --install
 
-# install homebrew
+# Install homebrew
 $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 $ brew update
 
-# install ansible
+# Install ansible
 $ brew install ansible
 
 # Install ansible collections
-$ ansible-galaxy collection install community.general
+$ ansible-galaxy collection install -r requirements.galaxy.yml
 ```
 
 ### Run all provisioning
@@ -37,7 +38,7 @@ $ ansible-playbook -i hosts -vv localhost.yml
 # Show a list of tags
 $ ansible-playbook -i hosts localhost.yml --list-tasks
 
-# Run tasks tagged 'cask'
+# Run the tasks with the 'cask' tag
 $ ansible-playbook -i hosts -vv localhost.yml --tags cask
 ```
 
