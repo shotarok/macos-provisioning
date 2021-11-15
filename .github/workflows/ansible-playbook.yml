@@ -1,6 +1,9 @@
 name: Run ansible-playbook on macOS
 
-on: [pull_request]
+on:
+  push:
+    branches:
+      - 'main'
 
 jobs:
   integration:
