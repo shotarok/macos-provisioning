@@ -1,15 +1,34 @@
----
-- git_config: name=user.name scope=global value="{{ gitname }}"
+- name: Configure user.name of .gitconfig globally
+  community.general.git_config:
+    name: user.name
+    scope: global
+    value: "{{ gitname }}"
   tags: gitconfig
 
-- git_config: name=user.email scope=global value="{{ gitmail }}"
+- name: Configure user.email of .gitconfig globally
+  community.general.git_config:
+    name: user.email
+    scope: global
+    value: "{{ gitmail }}"
   tags: gitconfig
 
-- git_config: name=color.ui scope=global value=true
+- name: Configure color.ui of .gitconfig globally
+  community.general.git_config:
+    name: color.ui
+    scope: global
+    value: true
   tags: gitconfig
 
-- git_config: name=core.editor scope=global value="{{ editor }}"
+- name: Configure core.editor of .gitconfig globally
+  community.general.git_config:
+    name: core.editor
+    scope: global
+    value: "{{ editor }}"
   tags: gitconfig
 
-- git_config: name=core.excludesfile scope=global value="{{ excludes_path }}"
+- name: Configure core.excludefile of .gitconfig globally
+  community.general.git_config:
+    name: core.excludesfile
+    scope: global
+    value: "{{ excludes_path }}"
   tags: gitconfig

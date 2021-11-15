@@ -1,6 +1,6 @@
 # oh-my-zsh
 - name: Install oh-my-zsh
-  shell: curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+  shell: set -o pipefail && curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
   args:
-    creates: ~/.oh-my-zsh/
+    creates: "{{ lookup('env', 'HOME') }}/.oh-my-zsh/"
   tags: zsh

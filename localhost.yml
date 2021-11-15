@@ -1,8 +1,8 @@
 - hosts: localdev
   connection: local
-  gather_facts: no
+  gather_facts: false
   vars:
     me: shotarok
   roles:
-    - { role: gitconfig }
-    - { role: common }
+    - {role: gitconfig}
+    - {role: common}
