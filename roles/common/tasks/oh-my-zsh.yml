@@ -9,7 +9,8 @@
   ansible.builtin.git:
     repo: https://github.com/paulirish/git-open.git
     dest: "{{ lookup('env', 'HOME') }}/.oh-my-zsh/custom/plugins/git-open"
-    clone: yes
+    clone: true
+    version: v2.1.0
   tags: zsh
 
 - name: Define on-my-zsh plugins on .zshrc
