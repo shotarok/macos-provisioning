@@ -1,6 +1,20 @@
 # oh-my-zsh
 - name: Install oh-my-zsh
-  shell: set -o pipefail && curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+  ansible.builtin.shell: set -o pipefail && curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
   args:
     creates: "{{ lookup('env', 'HOME') }}/.oh-my-zsh/"
+  tags: zsh
+
+- name: Clone a custom plugin for git-open
+  ansible.builtin.git:
+    repo: https://github.com/paulirish/git-open.git
+    dest: "{{ lookup('env', 'HOME') }}/.oh-my-zsh/custom/plugins/git-open"
+    clone: yes
+  tags: zsh
+
+- name: Define on-my-zsh plugins on .zshrc
+  ansible.builtin.lineinfile:
+    path: "{{ lookup('env', 'HOME') }}/.zshrc"
+    regexp: '^plugins='
+    line: plugins=(git autojump kube-ps1 kubectl kubectx git-open)
   tags: zsh

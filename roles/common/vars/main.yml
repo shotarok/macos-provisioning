@@ -2,18 +2,19 @@ homebrew_packages:
   - ag
   - ansible
   - aspell
+  - autojump
   - curl
   - direnv
   - emacs
   - gh
   - git
-  - git-open
   - imagemagick
   - java
   - jq
+  - kube-ps1
+  - kubectx
   - nkf
   - node
-  - openssl
   - openssl
   - peco
   - python
