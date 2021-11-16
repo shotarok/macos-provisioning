@@ -28,9 +28,11 @@ homebrew_cask_packages:
   - bartender
   - dropbox
   - google-chrome
+  - google-cloud-sdk
   - grammarly
   - homebrew/cask-drivers/gopro-webcam
   - karabiner-elements
+  - notion
   - rectangle
   - skitch
   - slack
