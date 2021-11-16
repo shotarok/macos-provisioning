@@ -2,18 +2,19 @@ homebrew_packages:
   - ag
   - ansible
   - aspell
+  - autojump
   - curl
   - direnv
   - emacs
   - gh
   - git
-  - git-open
   - imagemagick
   - java
   - jq
+  - kube-ps1
+  - kubectx
   - nkf
   - node
-  - openssl
   - openssl
   - peco
   - python
@@ -28,9 +29,11 @@ homebrew_cask_packages:
   - bartender
   - dropbox
   - google-chrome
+  - google-cloud-sdk
   - grammarly
   - homebrew/cask-drivers/gopro-webcam
   - karabiner-elements
+  - notion
   - rectangle
   - skitch
   - slack
