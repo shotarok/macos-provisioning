@@ -19,3 +19,11 @@
     regexp: '^plugins='
     line: plugins=(git autojump kube-ps1 kubectl kubectx git-open)
   tags: zsh
+
+- name: Add custom configurations to .zshrc
+  ansible.builtin.blockinfile:
+    path: "{{ lookup('env', 'HOME') }}/.zshrc"
+    block: |
+      # kube-ps1
+      PROMPT=$PROMPT'$(kube_ps1) '
+  tags: zsh
