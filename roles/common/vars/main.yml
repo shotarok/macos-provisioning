@@ -28,12 +28,14 @@ homebrew_cask_packages:
   - 1password
   - alfred
   - bartender
+  - docker
   - dropbox
   - google-chrome
   - google-cloud-sdk
   - grammarly
   - homebrew/cask-drivers/gopro-webcam
   - karabiner-elements
+  - licecap
   - notion
   - rectangle
   - skitch
