@@ -93,11 +93,44 @@
     key: KeyRepeat
     type: int
     value: 1
-  tags: keyrepeat
+  tags: [keyrepeat, osx_defaults]
 
 - name: Set time to start key repeats
   community.general.osx_defaults:
     key: InitialKeyRepeat
     type: int
     value: 15
-  tags: keyrepeat
+  tags: [keyrepeat, osx_defaults]
+
+- name: Configure mouse speed
+  community.general.osx_defaults:
+    domain: com.apple.mouse
+    key: scaling
+    value: 3
+  tags: [mouse, osx_defaults]
+
+- name: Show hidden files on Finder
+  community.general.osx_defaults:
+    domain: com.apple.finder
+    key: AppleShowAllFiles
+    type: bool
+    value: true
+  tags: [finder, osx_defaults]
+  notify:
+    - Refresh Finder
+
+- name: Avoid creating .DS_Store files on network volumes
+  community.general.osx_defaults:
+    domain: com.apple.desktopservices
+    key: DSDontWriteNetworkStores
+    type: bool
+    value: true
+  tags: [osx_defaults]
+
+- name: Avoid creating .DS_Store files on USB volumes
+  community.general.osx_defaults:
+    domain: com.apple.desktopservices
+    key: DSDontWriteUSBStores
+    type: bool
+    value: true
+  tags: [osx_defaults]
