@@ -49,7 +49,7 @@ jobs:
       - name: Check if the playbook is satisfied with Idempotence
         run: |
           idempotence=$(mktemp)
-          ansible-playbook main.yml | tee -a ${idempotence}
+          ansible-playbook -i hosts -vv localhost.yml | tee -a ${idempotence}
           tail ${idempotence} | grep -q 'changed=0.*failed=0' && (echo 'Idempotence test: pass' && exit 0) || (echo 'Idempotence test: fail' && exit 1)
         env:
           ANSIBLE_FORCE_COLOR: '1'
