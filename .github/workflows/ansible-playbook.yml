@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - 'main'
+      - fix-gh-workflow
   schedule:
     - cron: '0 18 * * *' # Every 6 pm UTC / 10 am PT
 
