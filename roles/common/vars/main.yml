@@ -8,6 +8,7 @@ homebrew_packages:
   - curl
   - direnv
   - emacs
+  - ffmpeg
   - gh
   - ghq
   - git
