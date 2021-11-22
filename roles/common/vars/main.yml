@@ -3,6 +3,7 @@ homebrew_packages:
   - ansible
   - aspell
   - autojump
+  - awscli
   - colordiff
   - curl
   - direnv
@@ -46,3 +47,4 @@ homebrew_cask_packages:
   - tunnelblick
   - visual-studio-code
   - xbar
+  - zoom
