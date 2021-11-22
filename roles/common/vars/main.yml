@@ -17,6 +17,7 @@ homebrew_packages:
   - jq
   - kube-ps1
   - kubectx
+  - kustomize
   - nkf
   - node
   - openssl
