@@ -5,7 +5,7 @@ on:
     branches:
       - 'main'
   schedule:
-    - cron: '0 18 * * *' # Every 6 pm UTC / 10 am PT
+    - cron: '0 18 1 * *' # Run at 6 pm UTC / 10 am PT on 1st every month
 
 jobs:
   integration:
