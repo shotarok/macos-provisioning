@@ -25,6 +25,9 @@ jobs:
           sudo rm -rf /Applications/Firefox.app
           sudo rm -rf /Applications/Google\ Chrome.app
 
+      - name: Update homebrew
+        run: brew update-reset && brew update
+
       - name: Install ansible
         run: brew install ansible
 
