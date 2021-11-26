@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - 'main'
+      - 'update-nov-25'
   schedule:
     - cron: '0 18 1 * *' # Run at 6 pm UTC / 10 am PT on 1st every month
   workflow_dispatch:
