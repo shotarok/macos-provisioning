@@ -22,6 +22,8 @@ homebrew_packages:
   - node
   - openssl
   - peco
+  - poetry
+  - protobuf
   - python
   - readline
   - stern
