@@ -12,6 +12,7 @@ homebrew_packages:
   - gh
   - ghq
   - git
+  - helm
   - imagemagick
   - java
   - jq
@@ -27,6 +28,8 @@ homebrew_packages:
   - python
   - readline
   - stern
+  - terrascan
+  - tfenv
   - tmux
   - tree
   - wget
