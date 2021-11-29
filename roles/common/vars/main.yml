@@ -28,6 +28,8 @@ homebrew_packages:
   - python
   - readline
   - stern
+  - terrascan
+  - tfenv
   - tmux
   - tree
   - wget
