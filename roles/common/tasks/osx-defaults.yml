@@ -109,6 +109,13 @@
     value: 3
   tags: [mouse, osx_defaults]
 
+- name: Configure trackpad speed
+  community.general.osx_defaults:
+    domain: com.apple.trackpad.scaling
+    key: scaling
+    value: 3
+  tags: [mouse, osx_defaults]
+
 - name: Show hidden files on Finder
   community.general.osx_defaults:
     domain: com.apple.finder
