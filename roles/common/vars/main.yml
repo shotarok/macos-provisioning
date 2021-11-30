@@ -1,4 +1,5 @@
 homebrew_packages:
+  - act
   - ag
   - ansible
   - aspell
