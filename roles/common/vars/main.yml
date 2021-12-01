@@ -33,6 +33,7 @@ homebrew_packages:
   - tfenv
   - tmux
   - tree
+  - watch
   - wget
 
 homebrew_cask_packages:
