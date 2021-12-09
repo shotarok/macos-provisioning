@@ -5,6 +5,7 @@ homebrew_packages:
   - aspell
   - autojump
   - awscli
+  - circleci
   - colordiff
   - curl
   - direnv
