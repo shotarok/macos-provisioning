@@ -55,6 +55,7 @@ homebrew_cask_packages:
   - skitch
   - slack
   - spotify
+  - stats
   - tunnelblick
   - visual-studio-code
   - xbar
