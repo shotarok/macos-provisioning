@@ -41,6 +41,7 @@ homebrew_cask_packages:
   - 1password
   - alfred
   - bartender
+  - devonthink
   - discord
   - docker
   - dropbox
