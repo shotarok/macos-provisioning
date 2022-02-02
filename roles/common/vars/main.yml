@@ -51,6 +51,7 @@ homebrew_cask_packages:
   - homebrew/cask-drivers/gopro-webcam
   - karabiner-elements
   - licecap
+  - miniconda
   - notion
   - rectangle
   - skitch
