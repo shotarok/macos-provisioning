@@ -29,6 +29,8 @@ homebrew_packages:
   - protobuf
   - python
   - readline
+  - shellcheck
+  - sponge
   - stern
   - terrascan
   - tfenv
