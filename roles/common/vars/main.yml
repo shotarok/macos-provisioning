@@ -50,7 +50,6 @@ homebrew_cask_packages:
   - google-chrome
   - google-cloud-sdk
   - grammarly
-  - homebrew/cask-drivers/gopro-webcam
   - karabiner-elements
   - licecap
   - notion
