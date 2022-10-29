@@ -53,6 +53,7 @@ homebrew_cask_packages:
   - karabiner-elements
   - licecap
   - notion
+  - raycast
   - rectangle
   - skitch
   - slack
