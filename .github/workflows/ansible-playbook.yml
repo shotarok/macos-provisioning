@@ -40,7 +40,7 @@ jobs:
         run: |
           brew install python@3.10
           brew link --overwrite python@3.10
-          pip3 install ansible==6.7.0
+          brew install ansible
 
       - name: Cache .ansible dir
         uses: actions/cache@v2
