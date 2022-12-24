@@ -20,9 +20,6 @@ $ brew update
 
 # Install ansible
 $ brew install ansible
-
-# Install ansible collections
-$ ansible-galaxy collection install -r requirements.galaxy.yml
 ```
 
 ### Run all provisioning
@@ -30,6 +27,7 @@ $ ansible-galaxy collection install -r requirements.galaxy.yml
 ```console
 $ git clone git@github.com:shotarok/macos-provisioning.git .macos-provisioning
 $ cd .macos-provisioning
+$ ansible-galaxy collection install -r requirements.galaxy.yml
 $ ansible-playbook -i hosts -vv localhost.yml
 ```
 
@@ -47,5 +45,3 @@ $ ansible-playbook -i hosts -vv localhost.yml --tags cask
 - [geerlingguy/mac-dev-playbook](https://github.com/geerlingguy/mac-dev-playbook)
 - [boxen/puppet-osx](https://github.com/boxen/puppet-osx)
 - [kosssi/ansible-role-gitconfig](https://github.com/kosssi/ansible-role-gitconfig)
-
-
