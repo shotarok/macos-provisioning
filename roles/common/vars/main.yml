@@ -43,7 +43,6 @@ homebrew_cask_packages:
   - 1password
   - alfred
   - bartender
-  - devonthink
   - discord
   - docker
   - dropbox
@@ -61,5 +60,7 @@ homebrew_cask_packages:
   - stats
   - tunnelblick
   - visual-studio-code
+  - warp
   - xbar
+  - warp
   - zoom
