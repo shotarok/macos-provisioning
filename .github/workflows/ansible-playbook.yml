@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - 'main'
+      - 'update-12-23-2022-take2'
   schedule:
     - cron: '0 18 1 * *' # Run at 6 pm UTC / 10 am PT on 1st every month
   workflow_dispatch:
@@ -35,8 +36,8 @@ jobs:
       - name: Update homebrew
         run: brew update-reset && brew update
 
-      - name: Install ansible
-        run: brew install ansible
+      - name: Install python and ansible
+        run: brew install python@3.11 ansible
 
       - name: Cache .ansible dir
         uses: actions/cache@v2
