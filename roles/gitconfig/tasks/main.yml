@@ -1,3 +1,5 @@
 ---
-- import_tasks: config.yml
-- import_tasks: ignore.yml
+- name: Set up gitconfig
+  ansible.builtin.import_tasks: config.yml
+- name: Set up gitignore
+  ansible.builtin.import_tasks: ignore.yml
