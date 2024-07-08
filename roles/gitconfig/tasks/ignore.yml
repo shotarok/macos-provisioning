@@ -2,6 +2,6 @@
 - name: Add global .gitignore as a .gitexcludesfile
   ansible.builtin.copy:
     src: gitignore
-    dest: "{{ excludes_path }}"
+    dest: "{{ gitconfig_excludes_path }}"
     mode: preserve
   tags: gitconfig
