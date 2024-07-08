@@ -1,6 +1,6 @@
 ---
-- import_tasks: homebrew.yml
-- import_tasks: homebrew-cask.yml
-- import_tasks: oh-my-zsh.yml
-- import_tasks: dotfiles.yml
-- import_tasks: osx-defaults.yml
+- ansible.builtin.import_tasks: homebrew.yml
+- ansible.builtin.import_tasks: homebrew-cask.yml
+- ansible.builtin.import_tasks: oh-my-zsh.yml
+- ansible.builtin.import_tasks: dotfiles.yml
+- ansible.builtin.import_tasks: osx-defaults.yml

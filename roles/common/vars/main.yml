@@ -1,4 +1,4 @@
-homebrew_packages:
+common_homebrew_packages:
   - act
   - ag
   - ansible
@@ -40,7 +40,7 @@ homebrew_packages:
   - watch
   - wget
 
-homebrew_cask_packages:
+common_homebrew_cask_packages:
   - 1password
   - discord
   - google-chrome

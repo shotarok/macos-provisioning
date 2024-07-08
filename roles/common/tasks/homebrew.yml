@@ -1,5 +1,5 @@
 - name: Install brew packages
   community.general.homebrew:
     name: "{{ item }}"
-  loop: "{{ homebrew_packages }}"
+  loop: "{{ common_homebrew_packages }}"
   tags: brew
