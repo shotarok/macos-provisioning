@@ -41,11 +41,7 @@ homebrew_packages:
 
 homebrew_cask_packages:
   - 1password
-  - alfred
-  - bartender
   - discord
-  - docker
-  - dropbox
   - google-chrome
   - google-cloud-sdk
   - grammarly
