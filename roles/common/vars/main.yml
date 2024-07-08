@@ -1,7 +1,8 @@
-homebrew_packages:
+common_homebrew_packages:
   - act
   - ag
   - ansible
+  - asdf
   - aspell
   - autojump
   - awscli
@@ -39,13 +40,9 @@ homebrew_packages:
   - watch
   - wget
 
-homebrew_cask_packages:
+common_homebrew_cask_packages:
   - 1password
-  - alfred
-  - bartender
   - discord
-  - docker
-  - dropbox
   - google-chrome
   - google-cloud-sdk
   - grammarly

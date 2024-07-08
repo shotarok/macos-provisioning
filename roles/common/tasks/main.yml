@@ -1,6 +1,11 @@
 ---
-- import_tasks: homebrew.yml
-- import_tasks: homebrew-cask.yml
-- import_tasks: oh-my-zsh.yml
-- import_tasks: dotfiles.yml
-- import_tasks: osx-defaults.yml
+- name: Install homebrew packages
+  ansible.builtin.import_tasks: homebrew.yml
+- name: Install homebrew cask packages
+  ansible.builtin.import_tasks: homebrew-cask.yml
+- name: Set up oh-my-zsh
+  ansible.builtin.import_tasks: oh-my-zsh.yml
+- name: Set up dotfiles
+  ansible.builtin.import_tasks: dotfiles.yml
+- name: Set up macos settings
+  ansible.builtin.import_tasks: osx-defaults.yml

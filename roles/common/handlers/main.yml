@@ -1,6 +1,8 @@
 ---
 - name: Refresh Dock
-  command: killall Dock
+  ansible.builtin.command: killall Dock
+  changed_when: true
 
 - name: Refresh Finder
-  command: killall Finder
+  ansible.builtin.command: killall Finder
+  changed_when: true

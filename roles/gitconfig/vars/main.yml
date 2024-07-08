@@ -1,5 +1,5 @@
 ---
-gitname: Shotaro Kohama
-gitmail: khmshtr28@gmail.com
-editor: emacs
-excludes_path: "{{ lookup('env', 'HOME') }}/.gitexcludesfile"
+gitconfig_gitname: Shotaro Kohama
+gitconfig_gitmail: khmshtr28@gmail.com
+gitconfig_editor: emacs
+gitconfig_excludes_path: "{{ lookup('env', 'HOME') }}/.gitexcludesfile"
