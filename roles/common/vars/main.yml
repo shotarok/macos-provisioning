@@ -42,6 +42,7 @@ common_homebrew_packages:
 
 common_homebrew_cask_packages:
   - 1password
+  - 1password-cli
   - discord
   - google-chrome
   - google-cloud-sdk
@@ -59,5 +60,4 @@ common_homebrew_cask_packages:
   - visual-studio-code
   - warp
   - xbar
-  - warp
   - zoom
