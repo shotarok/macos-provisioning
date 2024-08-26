@@ -6,7 +6,7 @@ common_homebrew_packages:
   - aspell
   - autojump
   - awscli
-  - circleci
+  - colima
   - colordiff
   - curl
   - direnv
@@ -22,6 +22,7 @@ common_homebrew_packages:
   - kube-ps1
   - kubectx
   - kustomize
+  - lima
   - nkf
   - node
   - openssl
@@ -43,21 +44,17 @@ common_homebrew_packages:
 common_homebrew_cask_packages:
   - 1password
   - 1password-cli
+  - arc
   - discord
   - google-chrome
-  - google-cloud-sdk
   - grammarly
   - karabiner-elements
   - licecap
   - notion
   - raycast
   - rectangle
-  - skitch
-  - slack
   - spotify
   - stats
-  - tunnelblick
   - visual-studio-code
   - warp
   - xbar
-  - zoom
