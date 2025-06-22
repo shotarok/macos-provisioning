@@ -6,16 +6,19 @@ common_homebrew_packages:
   - aspell
   - autojump
   - awscli
+  - circleci
   - colima
   - colordiff
   - curl
   - direnv
+  - docker
   - emacs
   - ffmpeg
   - gh
   - ghq
   - git
   - helm
+  - htop
   - imagemagick
   - java
   - jq
@@ -25,6 +28,7 @@ common_homebrew_packages:
   - lima
   - nkf
   - node
+  - ollama
   - openssl
   - peco
   - poetry
@@ -38,22 +42,28 @@ common_homebrew_packages:
   - tfenv
   - tmux
   - tree
+  - uv
   - watch
   - wget
 
 common_homebrew_cask_packages:
   - 1password
   - 1password-cli
+  - alfred
   - arc
   - discord
+  - docker
   - google-chrome
+  - google-cloud-sdk
   - karabiner-elements
   - licecap
   - notion
   - raycast
   - rectangle
+  - slack
   - spotify
   - stats
   - visual-studio-code
   - warp
   - xbar
+  - zoom
