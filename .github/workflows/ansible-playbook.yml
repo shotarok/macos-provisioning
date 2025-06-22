@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - 'main'
-      - 'fix-remove-unavailable-grammarly-cask'
   schedule:
     - cron: '0 18 1 * *' # Run at 6 pm UTC / 10 am PT on 1st every month
   workflow_dispatch:
