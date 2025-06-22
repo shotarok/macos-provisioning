@@ -47,7 +47,6 @@ common_homebrew_cask_packages:
   - arc
   - discord
   - google-chrome
-  - grammarly
   - karabiner-elements
   - licecap
   - notion
