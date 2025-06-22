@@ -1,5 +1,7 @@
 - name: Install cask packages
   community.general.homebrew_cask:
     name: "{{ item }}"
+    state: present
+    greedy: true
   loop: "{{ common_homebrew_cask_packages }}"
   tags: cask
