@@ -40,6 +40,14 @@ $ ansible-playbook -i hosts localhost.yml --list-tasks
 $ ansible-playbook -i hosts -vv localhost.yml --tags cask
 ```
 
+## PR's Workflow
+
+1. PR approved → 'ready-to-merge' label added
+2. Label triggers ansible-playbook CI
+3. New commits to labeled PR → CI automatically re-runs (with old jobs canceled)
+4. If CI passes → PR ready for merge
+5. If CI fails → label removed, PR blocked from merge
+
 ## References
 
 - [geerlingguy/mac-dev-playbook](https://github.com/geerlingguy/mac-dev-playbook)
