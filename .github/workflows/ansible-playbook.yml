@@ -16,7 +16,8 @@ jobs:
   integration:
     name: Integration Test
     runs-on: ${{ matrix.os }}
-    if: github.event.label.name == 'ready-to-merge'
+    if: github.event_name == 'workflow_dispatch' || github.event_name == 'schedule' || github.event.label.name == 'ready-to-merge'
+
     strategy:
       matrix:
         os:
