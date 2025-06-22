@@ -1,9 +1,8 @@
 name: Run ansible-playbook on macOS
 
 on:
-  push:
-    branches:
-      - 'main'
+  pull_request_review:
+    types: [submitted]
   schedule:
     - cron: '0 18 1 * *' # Run at 6 pm UTC / 10 am PT on 1st every month
   workflow_dispatch:
@@ -17,6 +16,7 @@ jobs:
   integration:
     name: Integration Test
     runs-on: ${{ matrix.os }}
+    if: github.event.review.state == 'approved'
     strategy:
       matrix:
         os:
