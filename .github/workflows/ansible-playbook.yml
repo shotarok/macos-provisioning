@@ -25,7 +25,7 @@ jobs:
 
     steps:
       - name: Check out the codebase
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Uninstall GitHub Actions' built-in browsers
         run: |
@@ -39,7 +39,7 @@ jobs:
         run: brew install ansible
 
       - name: Cache .ansible dir
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
           path: ~/.ansible
           key: ${{ runner.os }}-${{ hashFiles('**/requirements.galaxy.yml') }}
