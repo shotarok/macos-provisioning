@@ -1,5 +1,7 @@
 - hosts: localdev
   connection: local
+  # Disable fact gathering for local macOS provisioning - improves performance
+  # since we don't need Ansible facts for this playbook
   gather_facts: false
   vars:
     me: shotarok

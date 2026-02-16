@@ -2,6 +2,25 @@
 brew_info/
 cask_info/
 
+# Python
+*.pyc
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+
+# Ansible
+*.retry
+.ansible/
+ansible.cfg
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
 # Created by https://www.gitignore.io
 
 ### Emacs ###
@@ -45,7 +64,8 @@ tramp
 .LSOverride
 
 # Icon must end with two \r
-Icon
+Icon
+
 
 # Thumbnails
 ._*
