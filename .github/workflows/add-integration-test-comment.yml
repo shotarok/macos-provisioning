@@ -1,0 +1,70 @@
+name: Add Integration Test Comment
+
+on:
+  pull_request:
+    types: [opened, reopened]
+
+jobs:
+  add-comment:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - name: Add comment about integration tests
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const prNumber = context.issue.number;
+            const prTitle = context.payload.pull_request.title;
+            
+            const commentBody = `
+            ## 🚀 Integration Test Required for Merge
+
+            Hi! 👋 Thanks for opening this pull request.
+
+            **To merge this PR, you need to trigger the integration tests first.** Here's how:
+
+            ### Trigger Integration Tests
+
+            Once your changes are ready for testing, add the \`ready-to-merge\` label to this PR. This will automatically trigger the integration test workflow.
+
+            You can add the label by:
+            1. Going to this PR's page on GitHub
+            2. Click on the "Labels" dropdown (right sidebar)
+            3. Select "ready-to-merge"
+
+            ### What happens next?
+
+            - The integration tests will run on macOS
+            - Tests include: Ansible syntax check, playbook execution, and idempotence verification
+            - If all tests pass, your PR will be ready for merge! 🎉
+
+            > **Note:** If tests fail, the \`ready-to-merge\` label will be automatically removed. You'll need to fix the issues and add the label again to re-run the tests.
+
+            ---
+            *This comment is automatically added by the repository's CI/CD workflow.*
+            `;
+
+            // Check if we already commented on this PR
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: prNumber
+            });
+
+            const alreadyCommented = comments.some(comment => 
+              comment.body.includes('Integration Test Required for Merge')
+            );
+
+            if (!alreadyCommented) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: prNumber,
+                body: commentBody
+              });
+              console.log('Comment added successfully!');
+            } else {
+              console.log('Comment already exists, skipping...');
+            }
