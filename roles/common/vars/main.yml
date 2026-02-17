@@ -6,6 +6,7 @@ common_homebrew_packages:
   - aspell
   - autojump
   - awscli
+  - chezmoi
   - circleci
   - colima
   - colordiff
@@ -16,6 +17,8 @@ common_homebrew_packages:
   - gh
   - ghq
   - git
+  - go
+  - gmailctl
   - helm
   - htop
   - imagemagick
@@ -50,10 +53,15 @@ common_homebrew_cask_packages:
   - 1password-cli
   - alfred
   - arc
+  - calibre
+  - chatgpt
+  - claude
+  - cursor
   - discord
-  - docker
+  - docker-desktop
+  - gcloud-cli
+  - ghostty
   - google-chrome
-  - google-cloud-sdk
   - karabiner-elements
   - licecap
   - notion
