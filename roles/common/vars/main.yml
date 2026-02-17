@@ -6,7 +6,6 @@ common_homebrew_packages:
   - aspell
   - autojump
   - awscli
-  - bazel
   - chezmoi
   - circleci
   - colima
